@@ -1,0 +1,77 @@
+/* CARDS */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards__name {
+    width: 20%;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #00000080;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.cards__text{
+    text-align: center;
+}
+
+.load-more-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 100px 100px;
+}
+
+
+
+
+
+
+/* SEARCH */
+.search{
+    padding: 15px;
+}
+.form-container {
+    margin: 0 auto; /* Центрирование формы */
+    max-width: calc(100% - 400px); /* Максимальная ширина формы с отступами по бокам в 200px */
+    padding: 20px;
+    background-color: #f2f2f2; /* Серый фон */
+    border-radius: 20px; /* Закругление углов */
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    flex: 1; /* Растянуть поле ввода на всю доступную ширину */
+    padding: 10px;
+    border: none;
+    border-radius: 20px; /* Закругление углов */
+    outline: none;
+}
+
+.input-field::placeholder {
+    color: #999; /* Цвет placeholder'а */
+}
+
+.input-field:focus {
+    border: 2px solid #848484; /* Изменение стиля рамки при фокусе */
+}
+
+.submit-btn {
+    display: none; /* Скрыть кнопку поиска */
+}
+
+.icon {
+    margin-right: 10px; /* Отступ для иконки */
+}
+
