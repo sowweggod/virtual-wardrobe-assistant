@@ -5,22 +5,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.cards__name {
+  }
+  
+  .cards__name {
     width: 20%;
     height: 300px;
     border-radius: 30px;
     background-color: #00000080;
     margin-bottom: 20px;
     margin-left: 25px;
-}
+  }
 
-.cards__text{
+  .cards__text{
     text-align: center;
-}
-
-.load-more-btn {
+  }
+  
+  .load-more-btn {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -30,48 +30,89 @@
     font-size: 24px;
     cursor: pointer;
     margin: 100px 100px;
-}
-
-
-
-
-
+  }
+  
+  
+  
+  
+  
 
 /* SEARCH */
 .search{
-    padding: 15px;
+    padding: 15px;  
 }
 .form-container {
-    margin: 0 auto; /* Центрирование формы */
-    max-width: calc(100% - 400px); /* Максимальная ширина формы с отступами по бокам в 200px */
+    margin: 0 auto; 
+    max-width: calc(100% - 400px); 
     padding: 20px;
-    background-color: #f2f2f2; /* Серый фон */
-    border-radius: 20px; /* Закругление углов */
+    background-color: #f2f2f2; 
+    border-radius: 20px;
     display: flex;
     align-items: center;
-}
-
+  }
+  
 .input-field {
-    flex: 1; /* Растянуть поле ввода на всю доступную ширину */
+    flex: 1;
     padding: 10px;
     border: none;
-    border-radius: 20px; /* Закругление углов */
+    border-radius: 20px; 
     outline: none;
 }
 
 .input-field::placeholder {
-    color: #999; /* Цвет placeholder'а */
+    color: #999;
 }
 
 .input-field:focus {
-    border: 2px solid #848484; /* Изменение стиля рамки при фокусе */
+    border: 2px solid #848484;
 }
 
 .submit-btn {
-    display: none; /* Скрыть кнопку поиска */
+    display: none; 
 }
-
 .icon {
-    margin-right: 10px; /* Отступ для иконки */
+    margin-right: 10px; 
 }
 
+
+/* REGISRATION */
+.registration-container {
+  width: 400px; /* Ширина контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+  border: 2px solid #ccc; /* Обводка серым цветом */
+  border-radius: 10px; /* Закругление краев контейнера */
+  padding: 20px; /* Отступы внутри контейнера */
+}
+
+.registration-container h2 {
+  text-align: center; 
+}
+
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-container label {
+  margin-bottom: 15px; /* Отступ между метками и полями ввода */
+}
+
+.registration-container input {
+  padding: 8px; /* Отступы внутри текстовых полей */
+  margin-bottom: 15px; /* Отступ между полями ввода */
+  border-radius: 5px; /* Закругление краев текстовых полей */
+  border: 1px solid #ccc; /* Граница текстовых полей */
+}
+
+.registration-container button {
+  padding: 10px; 
+  border-radius: 5px; 
+  border: none; 
+  background-color: #92B0FF; 
+  color: white; 
+  cursor: pointer; 
+}
+
+.registration-container button:hover {
+  background-color: #819cde; 
+}
