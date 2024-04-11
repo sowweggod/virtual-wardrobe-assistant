@@ -119,10 +119,12 @@ meter {
         flex-wrap: wrap;
         align-items: flex-end;
         justify-content: space-between;
+        background-color: white;
 
         .header-menu{
             margin-left: 20px;
             margin-top: 20px;
+            padding-bottom: 20px;
             display: flex;
             flex-wrap: wrap;
 
