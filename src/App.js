@@ -1,18 +1,10 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer"
-import './App.css';
-import Search from "./components/Search";
-import {List} from "./components/List";
-import Cover from "./components/Cover";
+import React from 'react';
+import Main from "./pages/Main"
 
-function App() {
+const App = () => {
     return (
         <>
-            <Header />
-            <Cover/>
-            <Search/>
-            <List/>
-            <Footer />
+            <Main/>
         </>
     );
 }
