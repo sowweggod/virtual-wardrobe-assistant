@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyComponent.css"
-import Card from "./card";
+import Card from "./Card";
 import ShowMore from "../img/show-more.svg"
 
 export default function ProfileCards(){

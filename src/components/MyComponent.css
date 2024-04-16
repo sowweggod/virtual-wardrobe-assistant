@@ -215,17 +215,17 @@ meter {
 
 .registration__button{
     text-align: center;
-  padding: 10px; 
-  border-radius: 25px; 
-  border: none; 
-  background-color: #92B0FF; 
-  color: white; 
-  cursor: pointer; 
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: #92B0FF;
+  color: white;
+  cursor: pointer;
   margin-bottom: 10px;
 }
 
 .registration__button:hover {
-  background-color: #819cde; 
+  background-color: #819cde;
 }
 
 .login__text{
@@ -233,10 +233,10 @@ meter {
 }
 
 .login__link{
-    text-decoration: underline; 
-    color: #92B0FF; 
+    text-decoration: underline;
+    color: #92B0FF;
   }
-  
+
 
 .login__link:hover {
     color: #819cde; /* Изменяем цвет при наведении */
@@ -288,7 +288,7 @@ meter {
 .login__button{
     text-align: center;
   padding: 10px; 
-  border-radius: 25px; 
+  border-radius: 25px;
   border: none; 
   background-color: #92B0FF; 
   color: white; 
@@ -296,7 +296,7 @@ meter {
   margin-bottom: 10px;
 }
 
-.login__button:hover {
+.registration-container button:hover {
   background-color: #819cde; 
 }
 
@@ -354,6 +354,7 @@ meter {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        padding-bottom: 40px;
 
         .footer-navbar {
             display: flex;
@@ -465,3 +466,35 @@ meter {
     }
 }
 
+
+
+/*MainCards*/
+
+.main-gallery-wrapper{
+    width: 100%;
+    display: flex;
+
+    .main-cards-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .main-cards-btn{
+            width: 238px;
+            padding-left: 40px;
+            align-self: flex-start;
+        }
+
+        .main-cards-text{
+            font-size: 48px;
+            padding-left: 40px;
+            padding-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .main-cards{
+            display: flex;
+        }
+
+    }
+}

@@ -2,7 +2,7 @@ import React from "react";
 import "./MyComponent.css"
 import profile_photo from "../img/profile-photo.svg"
 import settings from "../img/settings.svg"
-function Profile_main(){
+function ProfileMain(){
     return(
         <>
             <div className="profile-cover-wrapper">
@@ -20,4 +20,4 @@ function Profile_main(){
     )
 }
 
-export default Profile_main;
+export default ProfileMain;

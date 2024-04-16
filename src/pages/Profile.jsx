@@ -1,14 +1,14 @@
 import React from "react";
-import Profile_main from "../components/Profile_main";
+import ProfileMain from "../components/ProfileMain";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import List from "../components/List";
-import ProfileCards from "../components/Profile-cards";
+import ProfileCards from "../components/ProfileCards";
 
 function Profile(){
     return(
         <>
-            <Profile_main />
+            <ProfileMain />
             <ProfileCards   />
         </>
     )
