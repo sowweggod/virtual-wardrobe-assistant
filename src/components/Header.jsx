@@ -1,6 +1,7 @@
 import React from "react";
 import "./MyComponent.css";
 import { Link } from "react-router-dom";
+
 function Header(){
     return(
         <header className="header">
@@ -15,7 +16,7 @@ function Header(){
                                 <Link to="/" className="header-link">Search</Link>
                             </li>
                             <li className="header-item">
-                                <Link to="/" className="header-link">Profile</Link>
+                                <Link to="/profile" className="header-link">Profile</Link>
                             </li>
                             <li className="header-item">
                                 <Link to="/" className="header-link">Sets</Link>

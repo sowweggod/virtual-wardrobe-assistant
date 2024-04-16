@@ -8,7 +8,7 @@ import ProfileCards from "../components/ProfileCards";
 function Profile(){
     return(
         <>
-        <ProfileMain />
+            <ProfileMain />
             <ProfileCards   />
         </>
     )
