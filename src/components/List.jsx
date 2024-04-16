@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./MyComponent.css";
 import card_photo from "../img/card.svg"
 import load_more from "../img/load-more.svg"
+import Card from "../components/card";
 
 const hello = [
     {
@@ -49,11 +50,11 @@ export function List() {
         <div className="cards-container">
             <div className="cards">
                 {hello.slice(0, visibleCards).map(card => (
-                    <div className="cards__name" key={card.id}>
+                    /*<div className="cards__name" key={card.id}>
                         <img src={card_photo} alt="Card" className="cards-photo"/>
-                    </div>
+                    </div>*/
+                    <Card/>
                 ))}
-
                 {visibleCards < hello.length && (
                     <button className="load-more-btn" onClick={loadMoreCards}>
                         <img src={load_more} alt="Load more" className="load-more-btn-photo"/>
