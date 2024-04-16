@@ -109,28 +109,38 @@ meter {
 
 
 /* CARDS */
-.cards-container{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
+
 .cards {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .cards__name {
+    width: 20%;
+    height: 300px;
+    border-radius: 30px;
+    background-color: #00000080;
+    margin-bottom: 20px;
+    margin-left: 25px;
+  }
 
-}
-
-.cards__name{
-    padding: 5% 5%;
-    width: 30%;
-
-}
-
-
+  .cards__text{
+    text-align: center;
+  }
   
   .load-more-btn {
-      width: 5%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #92B0FF;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 100px 100px;
+      align-self: center;
   }
   
   
@@ -177,21 +187,31 @@ meter {
 
 
 /* REGISTRATION */
+.registration h2{
+    color: black;
+    margin-top: 90px;
+    text-align: center;
+    font-size: 36px;
+}
 .registration-container {
   width: 400px; /* Ширина контейнера */
   margin: 0 auto; /* Центрирование контейнера */
-  border: 2px solid #ccc; /* Обводка серым цветом */
+  background-color: #808080;
   border-radius: 10px; /* Закругление краев контейнера */
   padding: 20px; /* Отступы внутри контейнера */
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.registration-container h2 {
-  text-align: center; 
+.registration-container p{
+    color: white;
 }
 
 .registration-container form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
 }
 
 .registration-container label {
@@ -201,22 +221,42 @@ meter {
 .registration-container input {
   padding: 8px; /* Отступы внутри текстовых полей */
   margin-bottom: 15px; /* Отступ между полями ввода */
-  border-radius: 5px; /* Закругление краев текстовых полей */
+  border-radius: 30px; /* Закругление краев текстовых полей */
   border: 1px solid #ccc; /* Граница текстовых полей */
+  background-color: white;
+}
+.button-container {
+    text-align: center; /* Центрирование содержимого по горизонтали */
 }
 
-.registration-container button {
+.registration__button{
+    text-align: center;
   padding: 10px; 
-  border-radius: 5px; 
+  border-radius: 25px; 
   border: none; 
   background-color: #92B0FF; 
   color: white; 
   cursor: pointer; 
+  margin-bottom: 10px;
 }
 
-.registration-container button:hover {
+.registration__button:hover {
   background-color: #819cde; 
 }
+
+.login__text{
+    margin-bottom: 20px;
+}
+
+.login{
+    text-decoration: underline; 
+    color: #92B0FF; 
+  }
+  
+
+.login:hover {
+    color: #819cde; /* Изменяем цвет при наведении */
+  }
 
 
 /*HEADER*/
@@ -273,7 +313,6 @@ meter {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        padding-bottom: 40px;
 
         .footer-navbar {
             display: flex;
@@ -288,7 +327,6 @@ meter {
             }
 
             .footer-chat {
-                width: 15%;
                 align-self: center;
                 padding-bottom: 30px;
             }
@@ -307,43 +345,9 @@ meter {
     justify-content: center;
 
     .cover-text{
-        padding: 30%;
+        padding: 450px;
         font-size: 70px;
         color: white;
         text-align: center;
-    }
-}
-
-/*PROFILE_MAIN*/
-
-.profile-cover-wrapper{
-    width: 100%;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    .settings-button{
-        width: 8%;
-        padding: 30px 10px;
-        align-self: flex-start;
-    }
-    .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 20%;
-
-        .profile-photo {
-            width: 25%;
-            align-self: center;
-        }
-
-        .profile-name {
-            padding-top: 20px;
-            font-size: 24px;
-            align-self: center;
-            text-align: center;
-        }
     }
 }

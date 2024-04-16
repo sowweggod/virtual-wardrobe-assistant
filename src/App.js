@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from "./pages/Main"
+import Profile from './pages/Profile'
 import { Route, Router, Routes } from 'react-router-dom';
 import Gallery from "./pages/Gallery"
 import Header from './components/Header';
@@ -15,7 +16,8 @@ const App = () => {
         <>
             <Header />
             <Routes>
-                <Route path="/" element={<Main />} />
+                <Route path="/" element={<RegistrationForm />} />
+                <Route path='/profile' element={<Profile/>} />
             </Routes>
             <Footer />
         </>
