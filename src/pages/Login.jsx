@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../components/MyComponent.css";
 
-const RegistrationForm = () => {
+const Login = () => {
     // Состояния для каждого поля
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
@@ -36,44 +36,17 @@ const RegistrationForm = () => {
     };
 
     return(
-        <div className='registration'>
-            <h2>Registration</h2>
-            <div className="registration-container"> {/* Применяем класс стиля к контейнеру */}
+        <div className='login'>
+            <h2>Log in</h2>
+            <div className="login-container">
                 <form>
                     <div>
-                        <p htmlFor="name">Name</p>
-                        <input
-                            type="text"
-                            id="name"
-                            value={name}
-                            onChange={handleNameChange}
-                        />
-                    </div>
-                    <div>
-                        <p htmlFor="surname">Surname</p>
-                        <input
-                            type="text"
-                            id="surname"
-                            value={surname}
-                            onChange={handleSurnameChange}
-                        />
-                    </div>
-                    <div>
-                        <p htmlFor="email">Email</p>
+                        <p htmlFor="email">Login</p>
                         <input
                             type="email"
                             id="email"
                             value={email}
                             onChange={handleEmailChange}
-                        />
-                    </div>
-                    <div>
-                        <p htmlFor="phoneNumber">Ph. number</p>
-                        <input
-                            type="tel"
-                            id="phoneNumber"
-                            value={phoneNumber}
-                            onChange={handlePhoneNumberChange}
                         />
                     </div>
                     <div>
@@ -88,11 +61,10 @@ const RegistrationForm = () => {
                 </form>
             </div>
             <div className="button-container">
-            <button type="submit" className='registration__button'>Register now</button>
-            <p className='login__text'>Already have an account? <Link to='/login' className="login__link">Log in.</Link> </p>
+            <button type="submit" className='login__button'>Log in</button>
             </div>
         </div>
     );
 }
 
-export default RegistrationForm;
+export default Login;

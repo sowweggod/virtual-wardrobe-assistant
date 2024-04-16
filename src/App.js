@@ -10,13 +10,14 @@ import List from './components/List'
 import Footer from './components/Footer';
 import './App.css';
 import RegistrationForm from './pages/RegistrationForm';
+import Login from './pages/Login';
 
 const App = () => {
     return (
         <>
             <Header />
             <Routes>
-                <Route path="/" element={<Profile />} />
+                <Route path="/" element={<Login />} />
             </Routes>
             <Footer />
         </>
