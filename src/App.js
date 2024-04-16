@@ -1,10 +1,23 @@
 import React from 'react';
 import Main from "./pages/Main"
+import { Route, Router, Routes } from 'react-router-dom';
+import Gallery from "./pages/Gallery"
+import Header from './components/Header';
+import Cover from './components/Cover';
+import Search from './components/Search';
+import List from './components/List'
+import Footer from './components/Footer';
+import './App.css';
+import RegistrationForm from './pages/RegistrationForm';
 
 const App = () => {
     return (
         <>
-            <Main/>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Main />} />
+            </Routes>
+            <Footer />
         </>
     );
 }

@@ -9,11 +9,9 @@ import Cover from "../components/Cover";
 function Main(){
     return(
         <>
-            <Header />
             <Cover/>
             <Search/>
             <List/>
-            <Footer />
         </>
     )
 }
