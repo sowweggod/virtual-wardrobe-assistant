@@ -116,16 +116,6 @@ meter {
     flex-wrap: wrap;
     gap: 20px;
   }
-  
-  .cards__name {
-    width: 20%;
-    height: 300px;
-    border-radius: 30px;
-    background-color: #00000080;
-    margin-bottom: 20px;
-    margin-left: 25px;
-  }
-
 
 .cards__name{
     padding: 5% 5%;

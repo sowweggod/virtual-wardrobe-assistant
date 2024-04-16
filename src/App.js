@@ -8,7 +8,6 @@ import Cover from './components/Cover';
 import Search from './components/Search';
 import List from './components/List'
 import Footer from './components/Footer';
-import Profile from "./pages/Profile";
 import './App.css';
 import RegistrationForm from './pages/RegistrationForm';
 
