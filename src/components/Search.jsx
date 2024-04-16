@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./MyComponent.css";
+import search from "../img/search.svg"
 
 const GlobalSearch = ({ onSearch }) => {
     const [query, setQuery] = useState('');
@@ -19,7 +20,7 @@ const GlobalSearch = ({ onSearch }) => {
     return (
         <div className="search">
             <form className="form-container" onSubmit={handleSubmit}>
-                <img className="icon" src="" alt="Search" />
+                <img className="icon" src={search} alt="Search" />
                 <input
                     className="input-field"
                     type="text"

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./MyComponent.css";
 import card_photo from "../img/card.svg"
 import load_more from "../img/load-more.svg"
-import Card from "../components/card";
+import Card from "./Card";
 
 const hello = [
     {

@@ -383,3 +383,34 @@ meter {
 
     }
 }
+
+/*MainCards*/
+
+.main-gallery-wrapper{
+    width: 100%;
+    display: flex;
+
+    .main-cards-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .main-cards-btn{
+            width: 238px;
+            padding-left: 40px;
+            align-self: flex-start;
+        }
+
+        .main-cards-text{
+            font-size: 48px;
+            padding-left: 40px;
+            padding-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .main-cards{
+            display: flex;
+        }
+
+    }
+}
