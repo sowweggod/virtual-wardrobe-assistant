@@ -109,38 +109,28 @@ meter {
 
 
 /* CARDS */
-
+.cards-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
 .cards {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .cards__name {
-    width: 20%;
-    height: 300px;
-    border-radius: 30px;
-    background-color: #00000080;
-    margin-bottom: 20px;
-    margin-left: 25px;
-  }
 
-  .cards__text{
-    text-align: center;
-  }
+}
+
+.cards__name{
+    padding: 5% 5%;
+    width: 30%;
+
+}
+
+
   
   .load-more-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    background-color: #92B0FF;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    margin: 100px 100px;
-      align-self: center;
+      width: 5%;
   }
   
   
@@ -283,6 +273,7 @@ meter {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        padding-bottom: 40px;
 
         .footer-navbar {
             display: flex;
@@ -297,6 +288,7 @@ meter {
             }
 
             .footer-chat {
+                width: 15%;
                 align-self: center;
                 padding-bottom: 30px;
             }
@@ -315,9 +307,43 @@ meter {
     justify-content: center;
 
     .cover-text{
-        padding: 450px;
+        padding: 30%;
         font-size: 70px;
         color: white;
         text-align: center;
+    }
+}
+
+/*PROFILE_MAIN*/
+
+.profile-cover-wrapper{
+    width: 100%;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .settings-button{
+        width: 8%;
+        padding: 30px 10px;
+        align-self: flex-start;
+    }
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20%;
+
+        .profile-photo {
+            width: 25%;
+            align-self: center;
+        }
+
+        .profile-name {
+            padding-top: 20px;
+            font-size: 24px;
+            align-self: center;
+            text-align: center;
+        }
     }
 }

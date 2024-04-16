@@ -15,7 +15,7 @@ function Header(){
                                 <a href="/" className="header-link">Search</a>
                             </li>
                             <li className="header-item">
-                                <a href="/" className="header-link">Profile</a>
+                                <a href="/Profile" className="header-link">Profile</a>
                             </li>
                             <li className="header-item">
                                 <a href="/" className="header-link">Sets</a>

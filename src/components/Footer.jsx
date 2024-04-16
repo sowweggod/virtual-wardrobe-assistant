@@ -1,5 +1,6 @@
 import React from "react";
 import "./MyComponent.css"
+import footer_photo from "../img/Footer.svg"
 
 export default function Footer(){
     return (
@@ -10,7 +11,7 @@ export default function Footer(){
                         <p className="footer-item-text">Virtual Wardrobe Assistant</p>
                     </div>
                     <div className="footer-chat">
-                        <img src="../img/Footer.svg" alt="chat" className="footer-chat-img" />
+                        <img src={footer_photo} alt="chat" className="footer-chat-img" />
                     </div>
                 </div>
             </div>
