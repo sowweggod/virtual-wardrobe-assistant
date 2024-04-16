@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Profile from "./pages/Profile";
 import './App.css';
 import RegistrationForm from './pages/RegistrationForm';
+import Login from './pages/Login';
 
 const App = () => {
     return (
@@ -17,6 +18,8 @@ const App = () => {
             <Header />
             <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path='/login' element={<Login />}/>
             </Routes>
             <Footer />
         </>
