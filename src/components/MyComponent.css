@@ -3,82 +3,65 @@
     display: revert;
 }
 
-/* Preferred box-sizing value */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Fix mobile Safari increase font-size on landscape mode */
 html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
 }
 
-/* Reapply the pointer cursor for anchor tags */
 a, button {
     cursor: revert;
 }
 
-/* Remove list styles (bullets/numbers) */
 ol, ul, menu {
     list-style: none;
 }
 
-/* For img to not be able to exceed their container */
 img {
     max-inline-size: 100%;
     max-block-size: 100%;
 }
 
-/* removes spacing between cells in tables */
 table {
     border-collapse: collapse;
 }
 
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input, textarea {
     -webkit-user-select: auto;
 }
 
-/* revert the 'white-space' property for textarea elements on Safari */
 textarea {
     white-space: revert;
 }
 
-/* minimum style to allow to style meter element */
 meter {
     -webkit-appearance: revert;
     appearance: revert;
 }
 
-/* preformatted text - use only for this feature */
 :where(pre) {
     all: revert;
     box-sizing: border-box;
 }
 
-/* reset default text opacity of input placeholder */
 ::placeholder {
     color: unset;
 }
 
-/* remove default dot (•) sign */
 ::marker {
     content: initial;
 }
 
-/* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
 :where([hidden]) {
     display: none;
 }
 
-/* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable="false"])) {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
@@ -87,12 +70,10 @@ meter {
     -webkit-user-select: auto;
 }
 
-/* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
 
-/* Revert Modal native behavior */
 :where(dialog:modal) {
     all: revert;
     box-sizing: border-box;
@@ -100,7 +81,7 @@ meter {
 
 :root {
     font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    font-feature-settings: 'liga' 1, 'calt' 1;
 }
 @supports (font-variation-settings: normal) {
     :root { font-family: InterVariable, sans-serif; }
@@ -127,11 +108,6 @@ meter {
       width: 10%;
   }
   
-  
-  
-  
-  
-
 /* SEARCH */
 .search{
     padding: 15px;  
@@ -178,11 +154,11 @@ meter {
     font-size: 36px;
 }
 .registration-container {
-  width: 400px; /* Ширина контейнера */
-  margin: 0 auto; /* Центрирование контейнера */
+  width: 400px; 
+  margin: 0 auto; 
   background-color: #808080;
-  border-radius: 10px; /* Закругление краев контейнера */
-  padding: 20px; /* Отступы внутри контейнера */
+  border-radius: 10px; 
+  padding: 20px; 
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -198,19 +174,15 @@ meter {
 
 }
 
-.registration-container label {
-  margin-bottom: 15px; /* Отступ между метками и полями ввода */
-}
-
 .registration-container input {
-  padding: 8px; /* Отступы внутри текстовых полей */
-  margin-bottom: 15px; /* Отступ между полями ввода */
-  border-radius: 30px; /* Закругление краев текстовых полей */
-  border: 1px solid #ccc; /* Граница текстовых полей */
+  padding: 8px; 
+  margin-bottom: 15px;
+  border-radius: 30px; 
+  border: 1px solid #ccc; 
   background-color: white;
 }
 .button-container {
-    text-align: center; /* Центрирование содержимого по горизонтали */
+    text-align: center; 
 }
 
 .registration__button{
@@ -230,6 +202,7 @@ meter {
 
 .login__text{
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .login__link{
@@ -239,27 +212,36 @@ meter {
 
 
 .login__link:hover {
-    color: #819cde; /* Изменяем цвет при наведении */
+    color: #819cde; 
   }
 
 /* LOGIN */
-.login h2{
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+.login h2 {
     color: black;
     margin-top: 90px;
     text-align: center;
     font-size: 36px;
 }
+
 .login-container {
-  width: 400px; /* Ширина контейнера */
-  margin: 0 auto; /* Центрирование контейнера */
+  width: 400px; 
+  margin: 0 auto; 
   background-color: #808080;
-  border-radius: 10px; /* Закругление краев контейнера */
-  padding: 20px; /* Отступы внутри контейнера */
+  border-radius: 10px; 
+  padding: 20px; 
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.login-container p{
+.login-container p {
     color: white;
 }
 
@@ -267,38 +249,52 @@ meter {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-}
-
-.login-container label {
-  margin-bottom: 15px; /* Отступ между метками и полями ввода */
 }
 
 .login-container input {
-  padding: 8px; /* Отступы внутри текстовых полей */
-  margin-bottom: 15px; /* Отступ между полями ввода */
-  border-radius: 30px; /* Закругление краев текстовых полей */
-  border: 1px solid #ccc; /* Граница текстовых полей */
+  padding: 8px; 
+  margin-bottom: 15px;
+  border-radius: 30px; 
+  border: 1px solid #ccc; 
   background-color: white;
 }
+
 .button-container {
-    text-align: center; /* Центрирование содержимого по горизонтали */
+    text-align: center; 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
 }
 
-.login__button{
+.login__button {
     text-align: center;
-  padding: 10px; 
-  border-radius: 25px;
-  border: none; 
-  background-color: #92B0FF; 
-  color: white; 
-  cursor: pointer; 
-  margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: #92B0FF;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.registration-container button:hover {
-  background-color: #819cde; 
+.login__button:hover {
+    background-color: #819cde; 
 }
+
+.login__text {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login__link {
+    text-decoration: underline;
+    color: #92B0FF;
+}
+
+.login__link:hover {
+    color: #819cde; 
+}
+
 
 /*HEADER*/
 .header{

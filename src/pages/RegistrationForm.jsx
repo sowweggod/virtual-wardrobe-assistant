@@ -1,52 +1,46 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import "../components/MyComponent.css";
 
 const RegistrationForm = () => {
-    // Состояния для каждого поля
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    // Обработчик изменения значения поля Name
-    const handleNameChange = (event) => {
-        setName(event.target.value);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/api/register/', {
+                name,
+                surname,
+                email,
+                phoneNumber,
+                password
+            });
+            console.log(response.data);
+            setError('');
+        } catch (error) {
+            console.error('Registration error:', error);
+            setError('Registration failed. Please try again.');
+        }
     };
 
-    // Обработчик изменения значения поля Surname
-    const handleSurnameChange = (event) => {
-        setSurname(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Email
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Ph. number
-    const handlePhoneNumberChange = (event) => {
-        setPhoneNumber(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Password
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
-
-    return(
+    return (
         <div className='registration'>
             <h2>Registration</h2>
-            <div className="registration-container"> {/* Применяем класс стиля к контейнеру */}
-                <form>
+            <div className="registration-container">
+                <form onSubmit={handleSubmit}>
                     <div>
                         <p htmlFor="name">Name</p>
                         <input
                             type="text"
                             id="name"
                             value={name}
-                            onChange={handleNameChange}
+                            onChange={(e) => setName(e.target.value)}
                         />
                     </div>
                     <div>
@@ -55,7 +49,7 @@ const RegistrationForm = () => {
                             type="text"
                             id="surname"
                             value={surname}
-                            onChange={handleSurnameChange}
+                            onChange={(e) => setSurname(e.target.value)}
                         />
                     </div>
                     <div>
@@ -64,16 +58,16 @@ const RegistrationForm = () => {
                             type="email"
                             id="email"
                             value={email}
-                            onChange={handleEmailChange}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div>
-                        <p htmlFor="phoneNumber">Ph. number</p>
+                        <p htmlFor="phoneNumber">Phone Number</p>
                         <input
                             type="tel"
                             id="phoneNumber"
                             value={phoneNumber}
-                            onChange={handlePhoneNumberChange}
+                            onChange={(e) => setPhoneNumber(e.target.value)}
                         />
                     </div>
                     <div>
@@ -82,15 +76,19 @@ const RegistrationForm = () => {
                             type="password"
                             id="password"
                             value={password}
-                            onChange={handlePasswordChange}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
+                    </div>
+                    {error && <p>{error}</p>}
+                    <div className="button-container">
+                        <button type="submit" className="registration__button">Register now</button>
                     </div>
                 </form>
             </div>
-            <div className="button-container">
-            <button type="submit" className='registration__button'>Register now</button>
-            <p className='login__text'>Already have an account? <Link to='/login' className="login__link">Log in.</Link> </p>
+            <div>
+                <p className='login__text'>Already have an account? <Link to='/login' className='login__link'>Log in here</Link></p>
             </div>
+            
         </div>
     );
 }

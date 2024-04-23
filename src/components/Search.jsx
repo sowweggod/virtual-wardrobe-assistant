@@ -11,7 +11,6 @@ const GlobalSearch = ({ onSearch }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Передаем внешнему обработчику запрос на поиск
         if (onSearch) {
             onSearch(query);
         }

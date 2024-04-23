@@ -1,52 +1,39 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 import "../components/MyComponent.css";
 
 const Login = () => {
-    // Состояния для каждого поля
-    const [name, setName] = useState('');
-    const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
-    const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-    // Обработчик изменения значения поля Name
-    const handleNameChange = (event) => {
-        setName(event.target.value);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.post('http://127.0.0.1:5000/api/login/', {  
+                email,
+                password
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error('Login error:', error);
+            setError('Invalid email or password');
+        }
     };
 
-    // Обработчик изменения значения поля Surname
-    const handleSurnameChange = (event) => {
-        setSurname(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Email
-    const handleEmailChange = (event) => {
-        setEmail(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Ph. number
-    const handlePhoneNumberChange = (event) => {
-        setPhoneNumber(event.target.value);
-    };
-
-    // Обработчик изменения значения поля Password
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
-
-    return(
+    return (
         <div className='login'>
             <h2>Log in</h2>
             <div className="login-container">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <p htmlFor="email">Login</p>
+                        <p htmlFor="email">Email</p>
                         <input
                             type="email"
                             id="email"
                             value={email}
-                            onChange={handleEmailChange}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
                     <div>
@@ -55,14 +42,16 @@ const Login = () => {
                             type="password"
                             id="password"
                             value={password}
-                            onChange={handlePasswordChange}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
+                    </div>
+                    {error && <p>{error}</p>}
+                    <div className="button-container">
+                        <button type="submit" className="login__button">Log in</button>
                     </div>
                 </form>
             </div>
-            <div className="button-container">
-            <button type="submit" className='login__button'>Log in</button>
-            </div>
+            <p className='login__text'>Don't have an account? <Link to='/register' className='login__link'>Register here</Link></p>
         </div>
     );
 }
