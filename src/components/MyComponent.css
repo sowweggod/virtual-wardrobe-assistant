@@ -13,7 +13,13 @@ html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
+    
 }
+
+body{
+    background-color: #627363;
+}
+
 
 a, button {
     cursor: revert;
@@ -109,19 +115,23 @@ meter {
   }
   
 /* SEARCH */
-.search{
+.search {
+    display: flex;
+    align-items: center;
     padding: 15px;  
+    padding-top: 100px;
 }
+
 .form-container {
-    margin: 0 auto; 
-    max-width: calc(100% - 400px); 
+    flex: 1; 
+    margin-right: 10px; 
     padding: 20px;
-    background-color: #f2f2f2; 
+    background-color: #ECC5FF; 
     border-radius: 20px;
     display: flex;
     align-items: center;
-  }
-  
+}
+
 .input-field {
     flex: 1;
     padding: 10px;
@@ -130,19 +140,63 @@ meter {
     outline: none;
 }
 
-.input-field::placeholder {
-    color: #999;
+.add-button {
+    background-color: #ECC5FF;
+    border: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.input-field:focus {
-    border: 2px solid #848484;
+.add-button:hover {
+    background-color: #e3acff;
 }
 
-.submit-btn {
-    display: none; 
-}
 .icon {
-    margin-right: 10px; 
+    margin-right: 10px;
+}
+
+/*FILTER*/
+
+.filter p{
+    color: #C5F1FF;
+}
+
+.filter {
+    cursor: pointer;
+    text-decoration: underline #C5F1FF; 
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px; 
+}
+
+.filter:hover {
+    cursor: pointer;
+    color: #C5F1FF; 
+}
+
+.filter-options {
+    position: absolute;
+    background-color: #C5F1FF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    right: 0; 
+    margin-top: 20px;
+    margin-right: 100px; 
+    z-index: 1; 
+}
+
+.filter-options p {
+    text-decoration: underline #C5F1FF; 
+    cursor: pointer;
+}
+
+.filter-options p:hover {
+    cursor: pointer;
+    color: #415346; 
 }
 
 
@@ -308,7 +362,7 @@ meter {
         flex-wrap: wrap;
         align-items: flex-end;
         justify-content: space-between;
-        background-color: white;
+        background-color: #415346;
 
         .header-menu{
             margin-left: 20px;
@@ -323,11 +377,11 @@ meter {
 
                 .header-link{
                     text-decoration: none;
-                    color: #808080;
+                    color: #ECC5FF ;
                 }
 
                 .header-link:hover, .header-link:focus, .header-link:active{
-                    color: #92B0FF;
+                    color: #84B78A;
 
                 }
             }
@@ -469,6 +523,7 @@ meter {
 .main-gallery-wrapper{
     width: 100%;
     display: flex;
+    
 
     .main-cards-wrapper{
         width: 100%;
@@ -479,6 +534,7 @@ meter {
             width: 238px;
             padding-left: 40px;
             align-self: flex-start;
+            
         }
 
         .main-cards-text{
@@ -493,4 +549,37 @@ meter {
         }
 
     }
+}
+
+/*BRANCHES*/
+.model-container {
+    position: relative;
+}
+
+.branches p {
+    color: #00bfff; /* Голубой цвет текста */
+    cursor: pointer;
+    text-decoration: underline; /* Подчеркивание */
+    margin-bottom: 10px; /* Отступ между филиалами */
+}
+
+.model-options {
+    position: absolute;
+    background-color: #ffc0cb; /* Розовый цвет фона */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: black; /* Черный цвет текста */
+    z-index: 1;
+    margin-top: 5px; /* Отступ сверху */
+}
+
+.model-options p {
+    margin-bottom: 8px; /* Добавляем отступ между пунктами */
+}
+
+.branches p:hover {
+    cursor: pointer;
+    text-decoration: underline; /* Подчеркивание */
+    color: #00bfff; /* Голубой цвет текста */
 }

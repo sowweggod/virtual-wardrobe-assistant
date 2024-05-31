@@ -10,19 +10,10 @@ function Header(){
                     <div className="header-navbar">
                         <ul className="header-menu">
                             <li className="header-item">
-                                <Link to="/" className="header-link">Wardrobe</Link>
+                                <Link to="/" className="header-link">Книги</Link>
                             </li>
                             <li className="header-item">
-                                <Link to="/" className="header-link">Search</Link>
-                            </li>
-                            <li className="header-item">
-                                <Link to="/profile" className="header-link">Profile</Link>
-                            </li>
-                            <li className="header-item">
-                                <Link to="/" className="header-link">Sets</Link>
-                            </li>
-                            <li className="header-item">
-                                <Link href="/" className="header-link">Contacts</Link>
+                                <Link to="/branches" className="header-link">Филиалы</Link>
                             </li>
                         </ul>
                     </div>
